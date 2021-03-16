@@ -100,6 +100,12 @@
 
       const firstUlDisappear = function () {
         //
+
+        let firtUl = document.getElementById("firstList")
+
+        firstUl.style.display = "none"
+
+
       };
 
       /* EXERCISE 8
@@ -108,6 +114,13 @@
 
       const paintItGreen = function () {
         //
+
+        let ul = document.getElementsByTagName("ul")
+        for(i=0;i<ul.length;i++){
+          ul[i].style.backgroundColor = "green"
+
+
+
       };
 
       /* EXERCISE 9
@@ -115,7 +128,24 @@
       */
 
       const makeItClickable = function () {
-        //
+
+        function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+       }
+
+        var hd = document.getElementsById("myHeading");
+
+        let click = hd.onclick 
+        click = hd.style.backgroundColor(getRandomColor)
+    
+}
+
+
       };
 
       /* EXERCISE 10
@@ -123,6 +153,12 @@
       */
 
       const changeFooterText = function () {
+
+        let mySecondFunction = function(){
+          document.querySelector('footer > p').innerHTML = 'Ciao'
+        }
+
+        document.querySelector('footer > p').addEventListener("click", mySecondFunction);
         //
       };
 
