@@ -20,16 +20,26 @@
       Write a function for changing the class of the title of the page in "myHeading".
       */
 
-      const addClassToTitle = function () {
+      const addClassToTitle = function (myStyle) {
         //
+
+        //document.getElementById("myHeading").className = "MyStyle"
+
+        let element = document.getElementById("myHeading");
+
+        element.classList.add("myStyle");
+
       };
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
+      const changePcontent = function (txt) {
         //
+
+        let ciao = document.querySelectorAll('div > p')
+        ciao.innerHTML = txt
       };
 
       /* EXERCISE 4
@@ -38,6 +48,13 @@
 
       const changeUrls = function () {
         //
+
+        let link = document.querySelectorAll('a').href
+        for (i=0;i<link.length;i++){
+          link[i] = "https://www.google.com"
+        }
+
+
       };
 
       /* EXERCISE 5
@@ -46,6 +63,18 @@
 
       const addToTheSecond = function (content) {
         //
+
+        let tag = document.createElement("li");
+
+        let text = document.createTextNode(content);
+
+        tag.appendChild(text);
+
+        var element = document.getElementById("secondList");
+
+        element.appendChild(tag); 
+
+
       };
 
       /* EXERCISE 6
@@ -53,6 +82,15 @@
       */
 
       const addParagraph = function (content) {
+
+        let divs = document.getElementsByTagName('div')
+        let tag = document.createElement("p")
+        let text = document.createTextNode(content);
+        tag.appendChild(text);
+        for(i=0;i<divs.length;i++){
+          divs[i].appendChild(tag)
+
+        }
         //
       };
 
